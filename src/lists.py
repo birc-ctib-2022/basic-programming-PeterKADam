@@ -3,7 +3,7 @@ import sys
 # This reads all of stdin and converts it into a list of integers.
 # This *only* works if there are no non-integers in the input.
 # You can learn how to deal with errors later...
-# x = [int(a) for a in sys.stdin.read().split()]
+x = [int(a) for a in sys.stdin.read().split()]
 
 # if you have a list of integers you want to write to stdout in the same
 # space separated format, you cannot use print(x) since that will add the
@@ -34,7 +34,7 @@ def print_list(x):
 # exercise, if it is "times", it is the second exercise, and if it is
 # "even" it is the third. Any other option is an error.
 
-x = [1, 2, 3, 4, 5, 6]
+# x = [1, 2, 3, 4, 5, 6]
 
 if len(sys.argv) < 2:
     print("Incorrect number of arguments.", file=sys.stderr)
