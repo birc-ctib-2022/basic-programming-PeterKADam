@@ -7,16 +7,19 @@ if len(sys.argv) != 3:
     print("Incorrect number of arguments.", file=sys.stderr)
     print(f"Usage: {sys.argv[0]} command string\n", file=sys.stderr)
     sys.exit(1)
-
+# print(sys.argv[1:3])
 command, x = sys.argv[1:3]
+
 
 match command:
     case "encode":
         # Implement the encoding here
-        encoding = ""
+
+        encoding = "".join([hex(ord(y)) for y in x])
         print(encoding)
 
     case "decode":
         # Implement the decoding here
-        decoding = ""
+        # print([n for n in x.split("0x")[1:]])
+        decoding = "".join([chr(int(n, base=16)) for n in x.split("0x")[1:]])
         print(decoding)
